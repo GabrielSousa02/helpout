@@ -1,0 +1,14 @@
+# Python binaries
+*/__pycache__
+__pycache__
+
+# Virtual Envs
+venv
+*/venv
+virtualenv
+*/virtualenv
+
+# IDE Configs
+.vscode
+.idea
+idea
