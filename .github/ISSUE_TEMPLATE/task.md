@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-Epic:
+Story:
 
 ### Description
 
