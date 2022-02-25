@@ -3,8 +3,7 @@
 __pycache__
 
 # Virtual Envs
-venv
-*/venv
+/venv
 virtualenv
 */virtualenv
 
