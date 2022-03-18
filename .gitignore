@@ -6,6 +6,7 @@ __pycache__
 /venv
 virtualenv
 */virtualenv
+.python-version
 
 # IDE Configs
 .vscode

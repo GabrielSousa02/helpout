@@ -1,0 +1,106 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: "JetBrains Mono", monospace;
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    background-color: cadetblue;
+    margin: 0;
+    padding: 10px;
+}
+
+header #logo {
+    height: 80px;
+    width: 80px;
+    padding: 0 15px 0 15px;
+    transform: rotate(90deg);
+}
+
+#main-title {
+    padding-left: 50px;
+    font-family: "JetBrains Mono", monospace ;
+}
+
+header #menu-header {
+    margin-left: auto;
+}
+
+#menu-header {
+    float: right;
+    padding-right: 30px;
+}
+
+.btn-header {
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 5px 10px;
+    background-color: midnightblue;
+    font-size: 16px;
+    font-family: "JetBrains Mono", monospace;
+    cursor: pointer;
+}
+
+.normal-btn {
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 5px 10px;
+    background-color: darkslategray;
+    font-size: 16px;
+    font-family: "JetBrains Mono", monospace;
+    cursor: pointer;
+}
+
+.sidenav {
+    height: 100%;
+    background-color: cadetblue;
+    padding-top: 15px;
+    top: 89px;
+    left: 0;
+    width: 160px;
+    position: fixed;
+    overflow-x: hidden;
+    z-index: 1;
+}
+
+.sidenav .nav-option, .nav-title {
+    padding: 12px 8px 6px 16px;
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+    display: block;
+}
+
+.sidenav .nav-option:hover {
+    color: #ffffff;
+}
+
+.sidenav .nav-option:focus {
+    color: white;
+}
+
+main {
+    grid-area: main;
+    margin-left: 160px;
+    padding: 10px 10px 10px 25px;
+    background-color: white;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "main main"
+        "footer footer";
+    grid-template-columns: 200px auto;
+}
+
