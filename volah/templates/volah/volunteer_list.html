@@ -1,0 +1,38 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <h1>ALL VOLUNTEERS</h1>
+    <a href="{% url 'volah:create_volunteer' %}"><button class="normal-btn">New</button></a>
+    <a href=""><button class="normal-btn">Search</button></a>
+    <a href="{% url 'volah:volah_home' %}"><button class="normal-btn">Back</button></a>
+    <div class="table-container">
+        <table class="all_items_table">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Email</th>
+                <th>Country</th>
+                <th>State/Province</th>
+                <th>Organization</th>
+                <th colspan="3">Actions</th>
+            </tr>
+            {% for volunteer in volunteers_list %}
+            <tr>
+                <td>{{ volunteer.id }}</td>
+                <td>{{ volunteer.name }}</td>
+                <td>{{ volunteer.surname }}</td>
+                <td>{{ volunteer.email }}</td>
+                <td>{{ volunteer.country }}</td>
+                <td>{{ volunteer.state_province }}</td>
+                <td>{{ volunteer.organization }}</td>
+                <td><a href="/volah/volunteer_detail/{{ volunteer.id }}"><button class="normal-btn">Detail</button></a></td>
+                <td><a href="/volah/volunteer_update/{{ volunteer.id }}"><button class="normal-btn">Edit</button></a></td>
+                <td><a href="/volah/volunteer_delete/{{ volunteer.id }}"><button class="normal-btn">Delete</button></a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}
