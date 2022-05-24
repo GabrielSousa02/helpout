@@ -1,0 +1,40 @@
+{% load static  %}
+
+{% block base %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'base/style.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=JetBrains_Mono">
+    {% block stylesheet %} {% endblock %}
+    <title>project helpout</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="{% url 'main_menu' %}"><img id="logo" alt="hand-logo" src="{% static 'img/hands-up.png' %}"></a>
+            <h3 id="main-title">the helpout project</h3>
+            <nav id="menu-header">
+                <a href="{% url 'main_menu' %}"><button class="btn-header">Main Menu</button></a>
+                <button class="btn-header">My Panel</button>
+                <button class="btn-header">Settings</button>
+                <button class="btn-header">Logout</button>
+            </nav>
+        </header>
+        <div class="sidenav">
+            <a class="nav-title" href="#" style="pointer-events: none">MODULES</a>
+            <a class="nav-option" href="{% url 'volah:volah_home' %}">Volah</a>
+            <a class="nav-title" href="#" style="pointer-events: none">Coming soon:</a>
+            <a class="nav-option" href="#" style="pointer-events: none">Projects Module</a>
+        </div>
+        <main>
+            {% block content %}
+
+            {% endblock %}
+        </main>
+    </div>
+
+</body>
+</html>
+{% endblock %}

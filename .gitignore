@@ -3,12 +3,17 @@
 __pycache__
 
 # Virtual Envs
-venv
-*/venv
+.venv
 virtualenv
 */virtualenv
+.python-version
 
 # IDE Configs
 .vscode
 .idea
 idea
+
+# DB
+*.db
+*.sqlite3
+*.sql

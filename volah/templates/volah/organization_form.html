@@ -1,0 +1,24 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <h1>CREATE/EDIT ORGANIZATION</h1>
+    <a href="{% url 'volah:list_organization' %}"><button class="normal-btn">Cancel</button></a>
+    <form method="post">
+        {% csrf_token %}
+
+        {% for field in form %}
+            <div class="form-field">
+                {{ field.label_tag }}
+            </div>
+            {{ field }}
+        {% endfor %}
+
+        <div class="foot-note">Fields marked with * are mandatory.</div>
+
+        <input type="submit">
+
+    </form>
+
+{% endblock %}
