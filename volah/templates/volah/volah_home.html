@@ -1,11 +1,25 @@
 {% extends 'base/base.html' %}
-{% block content %}
-<h3>welcome to the volah module</h3>
-<p>Here you can view, edit, and delete information related to your organization's pool of volunteers.</p>
 
+{% load static %}
+
+{% block content %}
+
+<h1>welcome to the volah module</h1>
+
+<p style="font-size: 20px">Here you can create, view, edit, and delete information related to <b>organizations</b>.</p>
     <div>
+        <h3>Organization Management</h3>
+        <a href="{% url 'volah:create_organization' %}"><button class="normal-btn">Create</button></a>
+        <a href="{% url 'volah:list_organization' %}"><button class="normal-btn">List All</button></a>
         <button class="normal-btn">Search</button>
-        <button class="normal-btn">Create</button>
+    </div>
+
+<p style="font-size: 20px">Here you can create, view, edit, and delete information related to <b>volunteers</b>.</p>
+    <div>
+        <h3>Volunteer Management</h3>
+        <a href="{% url 'volah:create_volunteer' %}"><button class="normal-btn">Create</button></a>
+        <a href="{% url 'volah:list_volunteer' %}"><button class="normal-btn">List All</button></a>
+        <button class="normal-btn">Search</button>
     </div>
 
 {% endblock %}

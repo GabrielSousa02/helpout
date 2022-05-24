@@ -1,16 +1,20 @@
-html, body {
-    margin: 0;
-    height: 100%;
-    font-family: "JetBrains Mono", monospace;
-}
-
 header {
     grid-area: header;
     display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    padding: 10px;
     align-items: center;
     background-color: cadetblue;
-    margin: 0;
-    padding: 10px;
+}
+
+html, body {
+    margin-top: 50px;
+    height: 100%;
+    font-family: "JetBrains Mono", monospace;
 }
 
 header #logo {
@@ -52,6 +56,17 @@ header #menu-header {
     padding: 5px 10px;
     background-color: darkslategray;
     font-size: 16px;
+    font-family: "JetBrains Mono", monospace;
+    cursor: pointer;
+}
+
+.danger-btn {
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 5px 10px;
+    background-color: red;
+    font-size: 20px;
     font-family: "JetBrains Mono", monospace;
     cursor: pointer;
 }
@@ -104,3 +119,21 @@ footer {
     grid-template-columns: 200px auto;
 }
 
+.form-field {
+    margin: 8px 8px 8px 0;
+}
+
+.all_items_table {
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+div .foot-note {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-style: italic;
+    font-size: 14px;
+    color: red;
+}
