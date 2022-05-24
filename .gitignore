@@ -12,3 +12,8 @@ virtualenv
 .vscode
 .idea
 idea
+
+# DB
+*.db
+*.sqlite3
+*.sql
