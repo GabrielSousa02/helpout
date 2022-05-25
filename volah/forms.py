@@ -14,8 +14,13 @@ class OrganizationForm(forms.ModelForm):
         fields = '__all__'
 
         labels = {
-            'hq_country': 'Headquarters Country',
-            'hq_state_province': 'Headquarters State/Province'
+
+            'name': "*Organization's Name",
+            'legal_status': '*Org. Legal Status',
+            'hq_country': "*Headquarters's Country",
+            'hq_state_province': "*Headquarters's State/Province",
+            'address_line_1': "*Address Line 1",
+            'phone': '*Org. Phone'
         }
 
 

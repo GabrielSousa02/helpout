@@ -217,7 +217,6 @@ skills = [
 
 class Organization(models.Model):
 
-    # MANDATORY
     name = models.CharField(max_length=250)
     legal_status = models.CharField(max_length=250)
     hq_country = models.CharField(max_length=250, choices=countries)
@@ -226,7 +225,6 @@ class Organization(models.Model):
     address_line_2 = models.CharField(max_length=100, blank=True)
     phone = models.CharField(max_length=15)
 
-    # OPTIONAL
     org_website = models.URLField(blank=True)
     contact_name = models.CharField(max_length=150, blank=True)
     contact_surname = models.CharField(max_length=150, blank=True)
