@@ -14,6 +14,7 @@ class OrganizationForm(forms.ModelForm):
         fields = '__all__'
 
         labels = {
+
             'name': "*Organization's Name",
             'legal_status': '*Org. Legal Status',
             'hq_country': "*Headquarters's Country",
