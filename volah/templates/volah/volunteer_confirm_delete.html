@@ -7,7 +7,7 @@
     <h3>You will NOT be able to recover it's information!!!</h3>
     <h2>Volunteer info:</h2>
     <h4>{{ volunteer.name }} {{ volunteer.surname }}</h4>
-    <h4>From: {{ volunteer.state_province }}/{{ volunteer.country }}</h4>
+    <h4>From: {{ volunteer.state_province }}/{{ volunteer.get_country_display }}</h4>
     <h4>Born in: {{ volunteer.date_of_birth }}</h4>
 
     <form method="post">
