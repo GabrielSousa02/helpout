@@ -7,7 +7,7 @@
     <h3>You will NOT be able to recover it's information!!!</h3>
     <h2>Organization info:</h2>
     <h4>{{ organization.name }} - {{ organization.legal_status }}</h4>
-    <h4>From: {{ organization.hq_state_province }}/{{ organization.hq_country }}</h4>
+    <h4>From: {{ organization.hq_state_province }}/{{ organization.get_hq_country_display }}</h4>
 
     <form method="post">
         {% csrf_token %}

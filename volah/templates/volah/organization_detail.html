@@ -1,0 +1,94 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+    <h1>ORGANIZATION DETAILS</h1>
+    <td><a href="/volah/organization_update/{{ organization.id }}"><button class="normal-btn">Edit</button></a></td>
+    <td><a href="/volah/organization_delete/{{ organization.id }}"><button class="normal-btn">Delete</button></a></td>
+
+    {# ORGANIZATION'S NAME #}
+    <div class="detail_container">
+        <h3 class="detail_label">ORGANIZATION'S NAME</h3>
+        <p class="detail_data">{{ organization.name }}</p>
+    </div>
+    <hr>
+
+    {# ORGANIZATION'S LEGAL STATUS #}
+    <div class="detail_container">
+        <h3 class="detail_label">ORGANIZATION'S LEGAL STATUS</h3>
+        <p class="detail_data">{{ organization.legal_status }}</p>
+    </div>
+    <hr>
+
+    {# ORGANIZATION'S HQ COUNTRY #}
+    <div class="detail_container">
+        <h3 class="detail_label">ORGANIZATION'S HQ COUNTRY</h3>
+        <p class="detail_data">{{ organization.get_hq_country_display }}</p>
+    </div>
+    <hr>
+
+    {# ORGANIZATION'S HQ STATE/PROVINCE #}
+    <div class="detail_container">
+        <h3 class="detail_label">ORGANIZATION'S HQ STATE/PROVINCE</h3>
+        <p class="detail_data">{{ organization.hq_state_province }}</p>
+    </div>
+    <hr>
+
+    {# ORGANIZATION'S ADDRESS LINE 1 #}
+    <div class="detail_container">
+        <h3 class="detail_label">ORGANIZATION'S ADDRESS LINE 1</h3>
+        <p class="detail_data">{{ organization.address_line_1 }}</p>
+    </div>
+    <hr>
+
+    {# ORGANIZATION'S ADDRESS LINE 2 #}
+    <div class="detail_container">
+        <h3 class="detail_label">ORGANIZATION'S ADDRESS LINE 2</h3>
+        <p class="detail_data">{{ organization.address_line_2 }}</p>
+    </div>
+    <hr>
+
+    {# ORGANIZATION'S PHONE #}
+    <div class="detail_container">
+        <h3 class="detail_label">ORGANIZATION'S PHONE</h3>
+        <p class="detail_data">{{ organization.phone }}</p>
+    </div>
+    <hr>
+
+    {# ORGANIZATION'S WEBSITE #}
+    <div class="detail_container">
+        <h3 class="detail_label">ORGANIZATION'S WEBSITE</h3>
+        <p class="detail_data">{{ organization.org_website }}</p>
+    </div>
+    <hr>
+
+    {# ORGANIZATION'S CONTACT NAME #}
+    <div class="detail_container">
+        <h3 class="detail_label">ORGANIZATION'S CONTACT NAME</h3>
+        <p class="detail_data">{{ organization.contact_name }}</p>
+    </div>
+    <hr>
+
+    {# ORGANIZATION'S CONTACT SURNAME #}
+    <div class="detail_container">
+        <h3 class="detail_label">ORGANIZATION'S CONTACT SURNAME</h3>
+        <p class="detail_data">{{ organization.contact_surname }}</p>
+    </div>
+    <hr>
+
+    {# ORGANIZATION'S CONTACT PHONE #}
+    <div class="detail_container">
+        <h3 class="detail_label">ORGANIZATION'S CONTACT PHONE</h3>
+        <p class="detail_data">{{ organization.contact_phone }}</p>
+    </div>
+    <hr>
+
+    {# ORGANIZATION'S CONTACT EMAIL #}
+    <div class="detail_container">
+        <h3 class="detail_label">ORGANIZATION'S CONTACT EMAIL</h3>
+        <p class="detail_data">{{ organization.contact_email }}</p>
+    </div>
+    <hr>
+
+
+{% endblock %}

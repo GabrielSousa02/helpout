@@ -1,0 +1,87 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+    <h1>VOLUNTEER DETAILS</h1>
+    <td><a href="/volah/volunteer_update/{{ volunteer.id }}"><button class="normal-btn">Edit</button></a></td>
+    <td><a href="/volah/volunteer_delete/{{ volunteer.id }}"><button class="normal-btn">Delete</button></a></td>
+
+    {# VOLUNTEER'S NAME #}
+    <div class="detail_container">
+        <h3 class="detail_label">VOLUNTEER'S NAME</h3>
+        <p class="detail_data">{{ volunteer.name }}</p>
+    </div>
+    <hr>
+
+    {# VOLUNTEER'S SURNAME #}
+    <div class="detail_container">
+        <h3 class="detail_label">VOLUNTEER'S SURNAME</h3>
+        <p class="detail_data">{{ volunteer.surname }}</p>
+    </div>
+    <hr>
+
+    {# VOLUNTEER'S DATE OF BIRTH #}
+    <div class="detail_container">
+        <h3 class="detail_label">VOLUNTEER'S DATE OF BIRTH</h3>
+        <p class="detail_data">{{ volunteer.date_of_birth }}</p>
+    </div>
+    <hr>
+
+    {# VOLUNTEER'S EMAIL #}
+    <div class="detail_container">
+        <h3 class="detail_label">VOLUNTEER'S EMAIL</h3>
+        <p class="detail_data">{{ volunteer.email }}</p>
+    </div>
+    <hr>
+
+    {# VOLUNTEER'S PHONE #}
+    <div class="detail_container">
+        <h3 class="detail_label">VOLUNTEER'S PHONE</h3>
+        <p class="detail_data">{{ volunteer.phone }}</p>
+    </div>
+    <hr>
+
+    {# VOLUNTEER'S COUNTRY #}
+    <div class="detail_container">
+        <h3 class="detail_label">VOLUNTEER'S COUNTRY</h3>
+        <p class="detail_data">{{ volunteer.get_country_display }}</p>
+    </div>
+    <hr>
+
+    {# VOLUNTEER'S STATE/PROVINCE #}
+    <div class="detail_container">
+        <h3 class="detail_label">VOLUNTEER'S STATE/PROVINCE</h3>
+        <p class="detail_data">{{ volunteer.state_province }}</p>
+    </div>
+    <hr>
+
+    {# VOLUNTEER'S NICKNAME #}
+    <div class="detail_container">
+        <h3 class="detail_label">VOLUNTEER'S NICKNAME</h3>
+        <p class="detail_data">{{ volunteer.nickname }}</p>
+    </div>
+    <hr>
+
+    {# VOLUNTEER'S BLOOD TYPE #}
+    <div class="detail_container">
+        <h3 class="detail_label">VOLUNTEER'S BLOOD TYPE</h3>
+        <p class="detail_data">{{ volunteer.get_blood_type_display }}</p>
+    </div>
+    <hr>
+
+    {# VOLUNTEER'S PRIMARY SKILL #}
+    <div class="detail_container">
+        <h3 class="detail_label">VOLUNTEER'S PRIMARY SKILL</h3>
+        <p class="detail_data">{{ volunteer.get_skills_display }}</p>
+    </div>
+    <hr>
+
+    {# VOLUNTEER'S CONECTED ORGANIZATION #}
+    <div class="detail_container">
+        <h3 class="detail_label">VOLUNTEER'S ORGANIZATION</h3>
+        <p class="detail_data">{{ volunteer.organization }}</p>
+    </div>
+    <hr>
+
+
+{% endblock %}
