@@ -137,3 +137,28 @@ div .foot-note {
     font-size: 14px;
     color: red;
 }
+
+.detail_container {
+    display: grid;
+    grid-template-areas:
+        "detail-label detail-data";
+    grid-template-columns: 30% 70%;
+    margin-bottom: 8px;
+}
+
+.detail_label {
+    grid-area: detail-label;
+    align-self: center;
+}
+
+.detail_data {
+    grid-area: detail-data;
+    align-self: center;
+}
+
+hr {
+    margin: 0;
+    color: darkgray;
+    width: 100%;
+}
+
