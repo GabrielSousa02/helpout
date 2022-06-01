@@ -1,10 +1,11 @@
 from django.db import models
 from django.core.validators import EmailValidator
+
 # Create your models here.
 
 
 countries = [
-    (None, '-'),
+    (None, "-"),
     ("afghanistan", "Afghanistan"),
     ("albania", "Albania"),
     ("algeria", "Algeria"),
@@ -199,14 +200,23 @@ countries = [
     ("vietnam", "Vietnam"),
     ("yemen", "Yemen"),
     ("zambia", "Zambia"),
-    ("zimbabwe", "Zimbabwe")
- ]
+    ("zimbabwe", "Zimbabwe"),
+]
 
-blood_types = [('', ' - '), ('a+', 'A+'), ('a-', 'A-'), ('b+', 'B+'), ('b-', 'B-'), ('ab+', 'AB+'),
-               ('ab-', 'AB-'), ('o+', 'O+'), ('o-', 'O-')]
+blood_types = [
+    ("", " - "),
+    ("a+", "A+"),
+    ("a-", "A-"),
+    ("b+", "B+"),
+    ("b-", "B-"),
+    ("ab+", "AB+"),
+    ("ab-", "AB-"),
+    ("o+", "O+"),
+    ("o-", "O-"),
+]
 
 skills = [
-    ('', '-'),
+    ("", "-"),
     ("first_aid", "First Aid"),
     ("comms", "Communications"),
     ("logistics", "Logistics"),
@@ -250,7 +260,9 @@ class Volunteer(models.Model):
     nickname = models.CharField(max_length=100, blank=True)
     blood_type = models.CharField(max_length=5, blank=True, choices=blood_types)
     skills = models.CharField(max_length=250, blank=True, choices=skills)
-    organization = models.ForeignKey('Organization', on_delete=models.SET_NULL, null=True, blank=True)
+    organization = models.ForeignKey(
+        "Organization", on_delete=models.SET_NULL, null=True, blank=True
+    )
 
     def __str__(self):
-        return f'{self.name} {self.surname}'
+        return f"{self.name} {self.surname}"
