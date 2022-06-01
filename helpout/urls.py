@@ -19,7 +19,7 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('', views.IndexTemplateView.as_view(), name='main_menu'),
-    path('volah/', include('volah.urls')),
-    path('admin/', admin.site.urls),
+    path("", views.IndexTemplateView.as_view(), name="main_menu"),
+    path("volah/", include("volah.urls")),
+    path("admin/", admin.site.urls),
 ]
