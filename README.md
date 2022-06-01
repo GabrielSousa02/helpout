@@ -40,7 +40,7 @@ on my free/study time.
     - Features:
       - Project tracking
     - Code improvements:
-      ~~- `make` file~~
+      - ~~`make` file~~
       - Docker containerization
       - Automated testing
       - Documentation with `Sphinx`
