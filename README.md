@@ -1,3 +1,4 @@
+[![Django CI](https://github.com/GabrielSousa02/helpout/actions/workflows/django.yml/badge.svg)](https://github.com/GabrielSousa02/helpout/actions/workflows/django.yml)
 # HELPOUT - Providing tools for Humanitarian Assistance
 
 ### Welcome to the _**helpout project**_ platform!
@@ -39,7 +40,7 @@ on my free/study time.
     - Features:
       - Project tracking
     - Code improvements:
-      - Automated testing
-      - `make` file
-      - Documentation with `Sphinx`
+      ~~- `make` file~~
       - Docker containerization
+      - Automated testing
+      - Documentation with `Sphinx`
